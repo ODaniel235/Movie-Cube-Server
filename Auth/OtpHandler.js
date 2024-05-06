@@ -19,7 +19,7 @@ const sendOTPByEmail = async (email, otp) => {
   });
 
   const mailOptions = {
-    from: "Dan <noreply@gmail.com>",
+    from: "Movie-Cube <noreply@gmail.com>",
     to: email,
     subject: "One-Time Password (OTP) for Verification",
     html: `

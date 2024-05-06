@@ -1,7 +1,6 @@
 import express from "express";
 import jwt from "jsonwebtoken";
 import cookieParser from "cookie-parser";
-import userModel from "../Schema/UserSchema.js";
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
