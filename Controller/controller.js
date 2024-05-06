@@ -86,7 +86,7 @@ export const checkIfVerified = async (req, res) => {
   try {
     res.status(200).json({ message: "User is authorized" });
   } catch (error) {
-    res.status(500).json({ message: error });
+    res.status(500).json({ message: 'error' });
   }
 };
 export const fetchMovies = async (req, res) => {

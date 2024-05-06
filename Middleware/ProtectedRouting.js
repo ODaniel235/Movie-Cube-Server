@@ -21,7 +21,6 @@ export const protectedRouting = async (req, res, next) => {
             {
               data1: decoded.data1,
               data2: decoded.data2,
-              data3: decoded.data3,
             },
             process.env.JWTSECRET,
             { expiresIn: 30 * 1000 }
