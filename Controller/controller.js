@@ -86,7 +86,7 @@ export const checkIfVerified = async (req, res) => {
   try {
     res.status(200).json({ message: "User is authorized" });
   } catch (error) {
-    res.status(500).json({ message: 'error' });
+    res.status(500).json({ message: "error" });
   }
 };
 export const fetchMovies = async (req, res) => {
@@ -171,5 +171,14 @@ export const trending = async (req, res) => {
     res.status(200).json({ data });
   } catch (error) {
     res.status(500).json({ error });
+  }
+};
+export const logout = async (req, res) => {
+  try {
+    await res.clearCookie("AccessToken");
+    await res.clearCookie("RefreshToken");
+    res.status(200).json({ message: "Cookie cleared" });
+  } catch (err) {
+    res.status(500).json({ message: err });
   }
 };
