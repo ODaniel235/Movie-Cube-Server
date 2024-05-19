@@ -8,7 +8,6 @@ import {
   fetchMovies,
   fetchMoviesByTitle,
   LoginUser,
-  logout,
   trending,
   upcoming,
 } from "../Controller/controller.js";
@@ -30,5 +29,5 @@ Router.get("/upcoming", upcoming);
 Router.get("/trending", trending);
 Router.post("/otp", sendOTPMail);
 Router.post("/otpv", CheckOtp);
-Router.post("/logout", logout);
+/* Router.post("/logout", logout); */
 export default Router;

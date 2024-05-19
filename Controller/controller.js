@@ -173,12 +173,12 @@ export const trending = async (req, res) => {
     res.status(500).json({ error });
   }
 };
-export const logout = async (req, res) => {
+/* export const logout = async (req, res) => {
   try {
-    await res.clearCookie("AccessToken");
-    await res.clearCookie("RefreshToken");
-    res.status(200).json({ message: "Cookie cleared" });
+    res.clearCookie('RefreshToken')
+    res.end()
   } catch (err) {
     res.status(500).json({ message: err });
   }
 };
+ */
