@@ -38,8 +38,9 @@ export const protectedRouting = async (req, res, next) => {
         jwt.verify(AccessToken, process.env.JWTSECRET, async (err, decoded) => {
           if (err) {
             res.status(401).json({ message: "Authorization failed" });
+          }else{
+            next()
           }
-          next();
         });
       }
     }
